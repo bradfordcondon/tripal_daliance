@@ -94,7 +94,15 @@ class local__biodalliance_formatter extends ChadoFieldFormatter {
 
     $module_path = drupal_get_path('module', 'tripal_biodalliance');
 
-    drupal_add_js("$module_path/theme/js/biodalliance_viewer.js");
+    // `$(function() {});` is shortcut for `$(document).ready(function() {});`
+
+    drupal_add_js("$module_path/includes/theme/js/biodalliance_viewer.js");
+
+$content = '<div id="svgHolder"></div>';
+    $element[] = [
+      '#type' => 'markup',
+      '#markup' => $content,
+    ];
   }
 
   /**
