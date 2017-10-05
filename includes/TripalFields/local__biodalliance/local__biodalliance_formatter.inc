@@ -94,8 +94,14 @@ class local__biodalliance_formatter extends ChadoFieldFormatter {
 
     $module_path = drupal_get_path('module', 'tripal_biodalliance');
 
+    //read file into blob
+    $blob =   fopen('/home/vagrant/Code/localDrupal/sites/default/files/biodalliance/valley_oak/Qlobata.2bit', 'r');
+
 //Add variables into the JS
     drupal_add_js(['tripal_biodalliance' => ['species_name' => "my_organism"]], ['type' => 'setting']);
+    drupal_add_js(['tripal_biodalliance' => ['blob' => $blob]], ['type' => 'setting']);
+
+
     drupal_add_js("$module_path/includes/theme/js/biodalliance_viewer.js");
 
 $content = '<div id="svgHolder"></div>';
