@@ -97,7 +97,7 @@ class local__biodalliance_formatter extends ChadoFieldFormatter {
     //read file into blob
    // $blob =   fopen('/var/www/html/sites/default/files/host/biodalliance/P_serotina.2bit', 'r');
 
-    $path = '/var/www/html/sites/default/files/host/biodalliance/P_serotina.2bit';
+    $path = 'files/host/biodalliance/P_serotina.2bit';
     //Add variables into the JS
     drupal_add_js(['tripal_biodalliance' => ['species_name' => "my_organism"]], ['type' => 'setting']);
     //drupal_add_js(['tripal_biodalliance' => ['blob' => $blob]], ['type' => 'setting']);
